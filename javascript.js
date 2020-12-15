@@ -9,7 +9,7 @@ const GENERIC_ERR = 'oops something is wrong, call ur ex bf to fix it lol '
 
 function init() {
     // call to get data
-    getcounters()
+    getcounters();
 }
 
 function write(id, text) {
@@ -34,7 +34,7 @@ function getcounters() {
             writeCounters(counters);
         })
         .catch(error => {
-            console.error(error)
+            console.error(error);
             handleError(GENERIC_ERR);
             handleError(error);
         });
@@ -45,7 +45,7 @@ function writeCounters(counters) {
     if (!counters) return;
     var keys = Object.keys(counters);
     keys.forEach(el => {
-        write(el, counters[el])
+        write(el, counters[el]);
     });
     deleteSpinners();
 }
